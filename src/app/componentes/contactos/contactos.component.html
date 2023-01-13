@@ -1,1 +1,24 @@
-<p>contactos works!</p>
+<div class="container">
+
+ <form [formGroup]="formLogin" (submit)="send()" >
+    <div class="">
+        <input type="text" placeholder="nombre" id="" class="form-control" formControlName="nombre">
+    </div><br>
+    <div class="">
+        <input type="email" placeholder="correo" class="form-control" formControlName="email">
+    </div><br>
+    <div class="">
+        <input type="number" placeholder="telefono" class="form-control" formControlName="telefono">
+    </div><br>
+    <div class="">
+        <input type="text" placeholder="sujeto" class="form-control" formControlName="sujeto">
+    </div><br>
+    <div class="">      
+       <textarea name="mensage"  cols="30" rows="10" placeholder="mensage" class="form-control" formControlName="mensage"></textarea> 
+    </div>
+    <div class="my-5 py-1 px-3 text-white bg-blue-500 rounded">
+        <button type="submit" [disabled]="formLogin.invalid">Send</button>
+    </div>
+</form>
+    
+</div>

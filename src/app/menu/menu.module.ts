@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NabartComponent } from './nabart/nabart.component';
+import { NumberValueAccessor } from '@angular/forms';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 
 
@@ -9,7 +11,12 @@ import { NabartComponent } from './nabart/nabart.component';
     NabartComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink,
+    RouterLinkActive
+  ],
+  exports:[
+    NabartComponent
   ]
 })
 export class MenuModule { }
